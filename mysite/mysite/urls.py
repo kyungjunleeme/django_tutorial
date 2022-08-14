@@ -19,6 +19,22 @@ from django.urls import path
 from django.contrib import admin
 from django.urls import include, path
 
+
+
+# Text to put at the end of each page's <title>.
+#site_title = gettext_lazy("Django site admin")
+
+# Text to put in each page's <h1>.
+#site_header = gettext_lazy("Django administration")
+
+# Text to put at the top of the admin index page.
+#index_title = gettext_lazy("Site administration")
+
+# https://stackoverflow.com/questions/4938491/django-admin-change-header-django-administration-text
+admin.site.site_header = 'Polls site'                    # default: "Django Administration"
+admin.site.index_title = 'Polls Administration'                 # default: "Site administration"
+admin.site.site_title = 'Polls site admin'  # default: "Django site admin"
+
 urlpatterns = [
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
