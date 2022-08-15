@@ -9,6 +9,7 @@ license = "MIT"
 python = "^3.10"
 
 [tool.poetry.dev-dependencies]
+Django = "^4.1"
 pytest = "^7.1.2"
 pytest-cov = "^3.0.0"
 black = "^22.6.0"
